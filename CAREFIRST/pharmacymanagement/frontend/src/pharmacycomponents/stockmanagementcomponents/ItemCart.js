@@ -37,7 +37,37 @@ class ItemCart extends Component {
 
  });
         
+    }  
+     calculate(data) {
+      
+        // var totalCart =0;
+        // var i = 0;
+
+        
+        
+        // var newData = JSON.stringify(newData);
+        //  newData = JSON.parse(newData);
+        // //console.log(newData);
+        // newData.forEach((item) => {
+        //     totalCart +=item.stockitemunitPrice*item.quantity;
+        //     i++;
+        // })
+       
+           
+        //     this.setState({
+        //         total: totalCart,
+                
+        //       });
+       data=JSON.parse(data);
+        var stockitemtotal =0;
+        data.forEach(tp => {
+            stockitemtotal+=tp.price;
+        })
+            this.state.Alltotal =stockitemtotal;
+
     } 
+
+    
     retrieveCartitems(){
        
 
@@ -110,34 +140,7 @@ class ItemCart extends Component {
     //         this.state.Alltotal =total;
     //     //console.log(total,"TOTAL");
     // }
-    calculate(data) {
-      
-        // var totalCart =0;
-        // var i = 0;
-
-        
-        
-        // var newData = JSON.stringify(newData);
-        //  newData = JSON.parse(newData);
-        // //console.log(newData);
-        // newData.forEach((item) => {
-        //     totalCart +=item.stockitemunitPrice*item.quantity;
-        //     i++;
-        // })
-       
-           
-        //     this.setState({
-        //         total: totalCart,
-                
-        //       });
-data=JSON.parse(data);
-        var stockitemtotal =0;
-        data.forEach(tp => {
-            stockitemtotal+=tp.price;
-        })
-            this.state.Alltotal =stockitemtotal;
-
-    }
+ 
     
     onStockItemSave=(stk)=>{
         stk.preventDefault();
