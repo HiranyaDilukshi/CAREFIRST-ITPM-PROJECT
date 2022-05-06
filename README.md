@@ -1,1 +1,1 @@
-#SLIIT-ITPM-PharmacyManangementSystem
+SLIIT-ITPM-PharmacyManangementSystem
