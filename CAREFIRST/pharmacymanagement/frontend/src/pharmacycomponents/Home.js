@@ -28,6 +28,11 @@ class Home extends Component {
         this.props.history.push(`/employees`);
 
     }
+      goToSupplier() {
+
+        this.props.history.push(`/suppliers`);
+
+    }
     render() {
         return (
             
@@ -99,7 +104,7 @@ class Home extends Component {
                                                         </div>
 
                                                         <div className="HomeBtn" >
-                                                            <button style={{ marginTop: 30,width: 100 }} onClick={"#"} > View</button>
+                                                            <button style={{ marginTop: 30,width: 100 }} onClick={this.goToSupplier.bind(this)} > View</button>
                                                         </div>
                                                     </div>
                                                 </Paper>
