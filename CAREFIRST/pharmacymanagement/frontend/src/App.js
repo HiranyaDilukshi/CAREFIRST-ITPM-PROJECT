@@ -51,7 +51,7 @@ class App extends Component {
       <Route path="/stockitems" exact component={ListStock}></Route>
 
  
-   <Route path="/" exact component={EmployeeDetails}></Route>
+   <Route path="/employees" exact component={EmployeeDetails}></Route>
    <Route path ="/add" component={EmployeeCreate}></Route>
    <Route path="/edit/:id" component={EmployeeEdit}></Route>
    <Route path="/attendence" component={attendence}></Route>
@@ -74,7 +74,7 @@ class App extends Component {
        <Route path="/sidebar" component={Sidebar}></Route>
        <Route path="/Home" component={Home}></Route>
 
-       <Route path='/login' exact component={Login} /> 
+       <Route path='/' exact component={Login} /> 
 
 
       
