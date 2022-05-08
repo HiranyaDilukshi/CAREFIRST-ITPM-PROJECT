@@ -39,13 +39,14 @@ export default function Login() {
 
     return (
 
+        <div className="bg-image"
+        style={{ backgroundImage: "url('https://thumbs.dreamstime.com/b/wedding-floral-decorative-vintage-background-ecru-bege-wedding-floral-decorative-vintage-background-ecru-bege-pale-wallpaper-119328289.jpg')" }} >
         <div className="container">
 
             <div class="eimage" >
                     {/* <img src = {Logo} width = "150" alt="logo"/> */}
             </div>
 
-            <div style={{marginTop:"200px"}}>
                
            
               
@@ -55,9 +56,10 @@ export default function Login() {
             <Grid container spacing={2} justify="center">
                 <div style={{ width: '450px' }}>
                 <br/>
-                    <fieldset className="blackborder transformDiv">
-                        <form id="admin_login" autoComplete="off" onSubmit={handleLoginSubmit}>
-                            <h5 style={{marginTop:"1000"}}>Admin Login</h5>
+                    <fieldset style={{marginTop:"150px"}} className="blackborder transformDiv" >
+                        <div >
+                        <form  id="admin_login" autoComplete="off" onSubmit={handleLoginSubmit} style={{backgroundColor:"#d8e4bc",borderRadius:"25px",padding:"50px",opacity:"0.90"}}>
+                           <center> <b><h5 style={{marginTop:"1000"}}>ADMIN LOGIN</h5></b></center>
                             <br />
                             <div className="form-group">
                                 <label>Username</label>
@@ -68,14 +70,14 @@ export default function Login() {
                                 <input type="password"  id="loginpassword" className="form-control" placeholder="Enter password" autoComplete="new-password" value={passwordInput} onChange={handlePasswordChange} />
                             </div>
                             <br />
-                            <button type="submit"  className="btn blue darken-1" style={{width:"100%"}}>LOGIN</button>
+                            <button type="submit"  className="btn btn-success" style={{width:"100%"}}>LOGIN</button>
                             <p className="forgot-password text-right"><br/></p>
-                        </form>
+                        </form></div>
                     </fieldset>
                     <br/><br/><br/><br/><br/><br/><br/>
                 </div>
             </Grid>
-       
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </div></div>
     );
 }
