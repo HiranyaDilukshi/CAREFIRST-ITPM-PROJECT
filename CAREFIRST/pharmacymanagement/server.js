@@ -16,17 +16,19 @@ const app=express();
 app.use(cors());
 
 //import routes
-const Router = require('./routes/stockitems');
-const CartRouter =require('./routes/itemcart');
+const empRoutes= require('./routes/supplier');
+const recRoutes= require('./routes/receive');
+
+
 //app middleware
 app.use(bodyParser.json());
-
+app.use(empRoutes);
+app.use(recRoutes);
 
 
 
 //routes middleware
-app.use(Router);
-app.use(CartRouter);
+
 
 app.use(express.json());
 
