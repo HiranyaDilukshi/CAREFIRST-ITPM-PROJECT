@@ -30,7 +30,7 @@ export default function Login() {
             const token = '123456abcdef';
             sessionStorage.setItem('auth-token', token);
             
-            history.push('/home');
+            history.push('/Home');
             window.location.reload();
         } else {
             alert('wrong username or password combination');
