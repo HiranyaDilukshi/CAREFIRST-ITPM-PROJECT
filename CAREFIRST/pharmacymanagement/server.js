@@ -1,22 +1,34 @@
- 
-const express=require('express');
-const mongoose=require('mongoose');
-const bodyparser=require('body-parser');
-const app=express();
-const cors=require('cors');
+const express = require('express');
+const mongoose = require('mongoose');
 
-const empRoutes= require('./routes/employees');
-const Router = require('./routes/stockitems');
-const CartRouter =require('./routes/itemcart');
+
+
+
+//convert request to java script object
+const bodyParser = require('body-parser'); 
+
+const cors = require("cors");
+
+
+const app=express();
+
+//import node.js pacakage for providing a connect/Express middleware can used to enable Cors with options
+app.use(cors());
+
+//import routes
+const empRoutes= require('./routes/supplier');
+const recRoutes= require('./routes/receive');
 
 
 //app middleware
- app.use(bodyparser.json());
- app.use(cors());
+app.use(bodyParser.json());
+app.use(empRoutes);
+app.use(recRoutes);
 
- app.use(empRoutes);
- app.use(Router);
-app.use(CartRouter);
+
+
+//routes middleware
+
 
 app.use(express.json());
 
@@ -24,18 +36,22 @@ app.use(
   express.urlencoded({ extended: true })
 );
 
-const PORT = 8000;
 
-const DB_URL= 'mongodb+srv://pwn:12345@myfirstcluster.9gnms.mongodb.net/carefirst?retryWrites=true&w=majority'
 
-mongoose.connect(DB_URL)
-.then(()=>{
-    console.log("DB connected")
+const PORT=8000;
+const DB_URL = 'mongodb+srv://pwn:12345@myfirstcluster.9gnms.mongodb.net/carefirst?retryWrites=true&w=majority';
+mongoose.connect(DB_URL,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 })
-.catch((err)=>console.log('DB connection error',err))
+.then(() =>{
+   console.log('DB connected');
+})
+.catch((err) => console.log('DB connection ERROR',err));
 
-app.listen(PORT, () =>{
- console.log(`App is running on ${PORT}`);
- 
 
+
+app.listen(PORT, ()=>{
+    console.log(`App is running on http://localhost:${PORT}`);
 });
+
