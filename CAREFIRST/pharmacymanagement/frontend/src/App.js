@@ -26,7 +26,7 @@ import Sidebar from './pharmacycomponents/Sidebar';
 import ItemDetail from './pharmacycomponents/stockmanagementcomponents/ItemDetail';
 import ItemCart from './pharmacycomponents/stockmanagementcomponents/ItemCart';
 import ListReport from './pharmacycomponents/stockmanagementcomponents/ListReport';
-import StockChart from './pharmacycomponents/stockmanagementcomponents/StockChart';
+
 import Home from './pharmacycomponents/Home';
 
 
@@ -73,14 +73,13 @@ class App extends Component {
        <Route path="/item/:id" component={ItemDetail}></Route>
        <Route path="/cartitems" component={ItemCart}></Route>
        <Route path="/listreport" component={ListReport}></Route>
-        <Route path="/stockchart" component={StockChart}></Route> 
        <Route path="/sidebar" component={Sidebar}></Route>
        <Route path="/Home" component={Home}></Route>
 
        <Route path='/' exact component={Login} /> 
 
 
-       <Route path="/suppliers" exact component={supplierdetails}></Route>
+    <Route path="/suppliers" exact component={supplierdetails}></Route>
    <Route path="sidebar" exact component={Sidebar}></Route>
    <Route path="/add" exact component={createsupplier}></Route>
    <Route path="/editsuppliers/:id" exact component={SupplierEdit}></Route>
