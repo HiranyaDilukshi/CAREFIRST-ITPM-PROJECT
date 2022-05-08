@@ -95,7 +95,7 @@ import Sidebar from './Sidebar';
 
              
                     <div className='buttonclass'>
-                    <button class="btn btn-primary" ><a href= "/add" style={{textDecoration:'none',color:'white'}}>New Supplier</a></button>
+                    <button class="btn btn-primary" ><a href= "/addsup" style={{textDecoration:'none',color:'white'}}>New Supplier</a></button>
                     <br></br><button class="btn btn-success" 
                     style={{ marginLeft: "1000px"}}>Get Report</button>   
                     
