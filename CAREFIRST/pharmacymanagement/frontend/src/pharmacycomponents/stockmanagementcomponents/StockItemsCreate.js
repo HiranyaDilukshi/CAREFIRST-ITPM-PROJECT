@@ -84,7 +84,7 @@ export default class  StockItemsCreate extends Component {
         })
     }   
     cancel(){
-        this.props.history.push('/');
+        this.props.history.push('/stockitems');
     }
 
     // validateNumberField = myNumber => {
