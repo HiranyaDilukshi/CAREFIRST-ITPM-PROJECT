@@ -5,28 +5,37 @@ import {
 } from "react-router-dom";
 
 import ListStock from './pharmacycomponents/stockmanagementcomponents/ListStock';
+import NavBar from './pharmacycomponents/stockmanagementcomponents/NavBar';
 import OutOfStock from './pharmacycomponents/stockmanagementcomponents/OutOfStock';
 import StockItemsCreate from './pharmacycomponents/stockmanagementcomponents/StockItemsCreate';
 import StockItemsDetails from './pharmacycomponents/stockmanagementcomponents/StockItemsDetails';
 import StockItemsEdit from './pharmacycomponents/stockmanagementcomponents/StockItemsEdit';
-import Sidebar from './pharmacycomponents/stockmanagementcomponents/Sidebar';
 import StockItemsView from './pharmacycomponents/stockmanagementcomponents/StockItemsView';
+import Sidebar from './pharmacycomponents/Sidebar';
 import ItemDetail from './pharmacycomponents/stockmanagementcomponents/ItemDetail';
 import ItemCart from './pharmacycomponents/stockmanagementcomponents/ItemCart';
 import ListReport from './pharmacycomponents/stockmanagementcomponents/ListReport';
 import StockChart from './pharmacycomponents/stockmanagementcomponents/StockChart';
 import Home from './pharmacycomponents/Home';
+// import Homepage from "./pharmacycomponents/homepage"
+// import Login from "./pharmacycomponents/Login"
+// import Register from "./pharmacycomponents/register"
+import Login from './pharmacycomponents/Login';
+
+
+
+
 
 class App extends Component {
   render() {
     return (
       <div className="bg-image"
       style={{ backgroundColor:"#F5FCFF" }} >  
-
+<NavBar/>
       <BrowserRouter>  
      
     
-   <Route path="/stockitems" exact component={ListStock}></Route>
+      <Route path="/stockitems" exact component={ListStock}></Route>
        <Route path="/addstockitems" component={StockItemsCreate}></Route>
        <Route path="/editstockitems/:id" component={StockItemsEdit}></Route>
        <Route path="/stockitems/:id" component={StockItemsView}></Route>
@@ -38,10 +47,16 @@ class App extends Component {
         <Route path="/stockchart" component={StockChart}></Route> 
        <Route path="/sidebar" component={Sidebar}></Route>
        <Route path="/Home" component={Home}></Route>
+       <Route path='/login' exact component={Login} /> 
+
+
+      
+    
+     
    
       </BrowserRouter> 
-
-    </div> 
+   </div> 
+  
     );
   }
 }

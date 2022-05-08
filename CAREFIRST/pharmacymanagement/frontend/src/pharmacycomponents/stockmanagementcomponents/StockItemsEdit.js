@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Sidebar from './Sidebar';
+import Sidebar from '../Sidebar';
 import medImg from "./medicines.jpg";
 
 class StockItemsEdit extends Component {
@@ -69,7 +69,7 @@ class StockItemsEdit extends Component {
                     }
                 )
             }
-            this.props.history.push('/');
+            this.props.history.push('/stockitems');
         })
     }   
 

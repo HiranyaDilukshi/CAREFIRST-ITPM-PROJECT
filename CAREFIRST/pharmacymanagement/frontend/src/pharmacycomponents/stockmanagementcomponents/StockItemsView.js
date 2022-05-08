@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './viewMod.css';
-import Sidebar from './Sidebar';
+import Sidebar from '../Sidebar';
 import Grid from '@material-ui/core/Grid';
 
 export default class StockItemsView extends Component{

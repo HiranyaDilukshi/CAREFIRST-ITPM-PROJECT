@@ -1,6 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
-import Sidebar from './Sidebar';
+import Sidebar from '../Sidebar';
 import CF3 from './CF3.png';
 
 export default class ListStock extends Component{

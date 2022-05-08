@@ -12,12 +12,14 @@ const cors = require("cors");
 
 const app=express();
 
+
 //import node.js pacakage for providing a connect/Express middleware can used to enable Cors with options
 app.use(cors());
 
 //import routes
 const Router = require('./routes/stockitems');
 const CartRouter =require('./routes/itemcart');
+
 //app middleware
 app.use(bodyParser.json());
 
@@ -27,6 +29,7 @@ app.use(bodyParser.json());
 //routes middleware
 app.use(Router);
 app.use(CartRouter);
+
 
 app.use(express.json());
 
