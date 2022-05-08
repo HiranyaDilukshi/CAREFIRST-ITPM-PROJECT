@@ -4,6 +4,17 @@ import {
   Route
 } from "react-router-dom";
 
+ 
+ 
+import EmployeeDetails from './pharmacycomponents/employeemanagementcomponent/EmployeeDetails';
+import EmployeeCreate from './pharmacycomponents/employeemanagementcomponent/EmployeeCreate';
+import EmployeeEdit from './pharmacycomponents/employeemanagementcomponent/EmployeeEdit';
+import employeereport from './pharmacycomponents/employeemanagementcomponent/employeereport'
+import attendence from './pharmacycomponents/employeemanagementcomponent/attendence';
+ 
+ 
+
+ 
 import ListStock from './pharmacycomponents/stockmanagementcomponents/ListStock';
 import NavBar from './pharmacycomponents/stockmanagementcomponents/NavBar';
 import OutOfStock from './pharmacycomponents/stockmanagementcomponents/OutOfStock';
@@ -17,10 +28,11 @@ import ItemCart from './pharmacycomponents/stockmanagementcomponents/ItemCart';
 import ListReport from './pharmacycomponents/stockmanagementcomponents/ListReport';
 import StockChart from './pharmacycomponents/stockmanagementcomponents/StockChart';
 import Home from './pharmacycomponents/Home';
-// import Homepage from "./pharmacycomponents/homepage"
-// import Login from "./pharmacycomponents/Login"
-// import Register from "./pharmacycomponents/register"
+
+
 import Login from './pharmacycomponents/Login';
+
+
 
 
 
@@ -35,7 +47,21 @@ class App extends Component {
       <BrowserRouter>  
      
     
+
       <Route path="/stockitems" exact component={ListStock}></Route>
+
+ 
+   <Route path="/" exact component={EmployeeDetails}></Route>
+   <Route path ="/add" component={EmployeeCreate}></Route>
+   <Route path="/edit/:id" component={EmployeeEdit}></Route>
+   <Route path="/attendence" component={attendence}></Route>
+   <Route path="/employeereport" component={employeereport}></Route>
+      
+    
+        
+ 
+   <Route path="/stockitems" exact component={ListStock}></Route>
+
        <Route path="/addstockitems" component={StockItemsCreate}></Route>
        <Route path="/editstockitems/:id" component={StockItemsEdit}></Route>
        <Route path="/stockitems/:id" component={StockItemsView}></Route>
@@ -47,12 +73,16 @@ class App extends Component {
         <Route path="/stockchart" component={StockChart}></Route> 
        <Route path="/sidebar" component={Sidebar}></Route>
        <Route path="/Home" component={Home}></Route>
+
        <Route path='/login' exact component={Login} /> 
 
 
       
     
      
+
+ 
+
    
       </BrowserRouter> 
    </div> 
