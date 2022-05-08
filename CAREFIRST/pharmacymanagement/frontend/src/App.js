@@ -80,7 +80,7 @@ class App extends Component {
 
     <Route path="/suppliers" exact component={supplierdetails}></Route>
    <Route path="sidebar" exact component={Sidebar}></Route>
-   <Route path="/add" exact component={createsupplier}></Route>
+   <Route path="/addsup" exact component={createsupplier}></Route>
    <Route path="/editsuppliers/:id" exact component={SupplierEdit}></Route>
    <Route path ="/receive" exact component={receivedetails}></Route>
     
