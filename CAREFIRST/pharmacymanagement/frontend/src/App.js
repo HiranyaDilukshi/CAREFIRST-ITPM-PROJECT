@@ -10,7 +10,7 @@ import EmployeeDetails from './pharmacycomponents/employeemanagementcomponent/Em
 import EmployeeCreate from './pharmacycomponents/employeemanagementcomponent/EmployeeCreate';
 import EmployeeEdit from './pharmacycomponents/employeemanagementcomponent/EmployeeEdit';
 import employeereport from './pharmacycomponents/employeemanagementcomponent/employeereport'
-import attendence from './pharmacycomponents/employeemanagementcomponent/attendence';
+
  
  
 
@@ -57,7 +57,6 @@ class App extends Component {
    <Route path="/employees" exact component={EmployeeDetails}></Route>
    <Route path ="/add" component={EmployeeCreate}></Route>
    <Route path="/edit/:id" component={EmployeeEdit}></Route>
-   <Route path="/attendence" component={attendence}></Route>
    <Route path="/employeereport" component={employeereport}></Route>
       
     
