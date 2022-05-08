@@ -27,7 +27,7 @@ export default class StockItemsView extends Component{
         });
     }
     cancel(){
-        this.props.history.push('/');
+        this.props.history.push('/stockitems');
     }
   render(){
 
