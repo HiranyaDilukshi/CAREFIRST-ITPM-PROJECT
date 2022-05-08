@@ -4,6 +4,17 @@ import {
   Route
 } from "react-router-dom";
 
+ 
+ 
+import EmployeeDetails from './pharmacycomponents/employeemanagementcomponent/EmployeeDetails';
+import EmployeeCreate from './pharmacycomponents/employeemanagementcomponent/EmployeeCreate';
+import EmployeeEdit from './pharmacycomponents/employeemanagementcomponent/EmployeeEdit';
+import employeereport from './pharmacycomponents/employeemanagementcomponent/employeereport'
+import attendence from './pharmacycomponents/employeemanagementcomponent/attendence';
+ 
+ 
+
+ 
 import ListStock from './pharmacycomponents/stockmanagementcomponents/ListStock';
 import OutOfStock from './pharmacycomponents/stockmanagementcomponents/OutOfStock';
 import StockItemsCreate from './pharmacycomponents/stockmanagementcomponents/StockItemsCreate';
@@ -16,6 +27,7 @@ import ItemCart from './pharmacycomponents/stockmanagementcomponents/ItemCart';
 import ListReport from './pharmacycomponents/stockmanagementcomponents/ListReport';
 import StockChart from './pharmacycomponents/stockmanagementcomponents/StockChart';
 import Home from './pharmacycomponents/Home';
+ 
 
 class App extends Component {
   render() {
@@ -26,6 +38,16 @@ class App extends Component {
       <BrowserRouter>  
      
     
+ 
+   <Route path="/" exact component={EmployeeDetails}></Route>
+   <Route path ="/add" component={EmployeeCreate}></Route>
+   <Route path="/edit/:id" component={EmployeeEdit}></Route>
+   <Route path="/attendence" component={attendence}></Route>
+   <Route path="/employeereport" component={employeereport}></Route>
+      
+    
+        
+ 
    <Route path="/stockitems" exact component={ListStock}></Route>
        <Route path="/addstockitems" component={StockItemsCreate}></Route>
        <Route path="/editstockitems/:id" component={StockItemsEdit}></Route>
@@ -38,6 +60,7 @@ class App extends Component {
         <Route path="/stockchart" component={StockChart}></Route> 
        <Route path="/sidebar" component={Sidebar}></Route>
        <Route path="/Home" component={Home}></Route>
+ 
    
       </BrowserRouter> 
 
