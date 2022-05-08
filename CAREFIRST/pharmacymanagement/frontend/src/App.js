@@ -51,7 +51,7 @@ class App extends Component {
      
     
 
-      <Route path="/stockitems" exact component={ListStock}></Route>
+
 
  
    <Route path="/employees" exact component={EmployeeDetails}></Route>
