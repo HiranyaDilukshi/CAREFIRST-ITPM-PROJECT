@@ -3,7 +3,7 @@ import axios from 'axios';
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import './medicineitem.css';
-import Sidebar from './Sidebar';
+import Sidebar from '../Sidebar';
 
 export default class StockItemsDetails extends Component{
 

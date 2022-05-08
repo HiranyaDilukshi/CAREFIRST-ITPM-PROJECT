@@ -1,6 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
-import Sidebar from './Sidebar';
+import Sidebar from '../Sidebar';
 import medImg from "./medicines.jpg";
 
 export default class  StockItemsCreate extends Component {

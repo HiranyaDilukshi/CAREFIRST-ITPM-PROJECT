@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
+import {useParams} from "react-router-dom";
 
 export default class OutOfStock extends Component{
 
@@ -7,25 +8,31 @@ export default class OutOfStock extends Component{
       super(props);
 
       this.state={
-          stockitems:[]
+          stockitems:[],
+          stockitemAvailableQty:""
       }
       this.addStock = this.addStock.bind(this);
   }
 
   componentDidMount(){
+   
     this.retrieveStockitems();
+    
   }
 
   addStock() {
     this.props.history.push('/addstockitems');
-}
+} 
+
  retrieveStockitems(){ 
-   
-       axios.get(`http://localhost:8000/outofstockitems/?stockitemAvailableQty=0`).then((res)=>{
-        if(res.data.success){
+  
+       axios.get(`http://localhost:8000/outofstockitems`).then((res)=>{
+        
+        if(res.data.success){ 
+          if (this.state.stockitemAvailableQty ==="0" ) {
             this.setState({
              
-                stockitems:res.data.existingStockitems.sort(this.stockitemAvailableQty),
+                stockitems:res.data.existingStockitems
                
             });
 
@@ -33,7 +40,8 @@ export default class OutOfStock extends Component{
 
             console.log(this.state.stockitems);
         }
-    });
+  } });
+  
 }
 
 
