@@ -1,6 +1,9 @@
 
 
 Project Name - Online Pharmacy System
+Computerized pharmacy management systems are revolutionizing the health care industry. Generally, in a pharmacy, the pharmacist has to work 24 hours due to query management, payment handling, and dues of suppliers and employees. Doing these works manually requires a tremendous amount of time and faces many errors too.
+The main objective of the Pharmacy Management system is to manage the details of the Employees, Suppliers, handle pharmacy stock and provide secure payment options. 
+The project is totally built at the administrative end and thus only the administrator is guaranteed the access.
 
 Batch - Weekday Batch REG_WD_37
 
